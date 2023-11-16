@@ -1,4 +1,4 @@
-#EPS, CA 1
+# EPS, CA 1
 ## Necessary Imports:
 In this project, we are going to use `numpy` and `scipy.stats` for computational work, and `matplotlib.pyplot` for visualizing our workd with plots and histograms.
 
@@ -35,7 +35,7 @@ plt.show()
 ```
 
 
-![png](plots/plots/output_3_0.png)
+![png](plots/output_3_0.png)
     
 
 
@@ -64,7 +64,7 @@ plt.show()
 
 
     
-![png](plots/plots/output_5_0.png)
+![png](plots/output_5_0.png)
     
 
 
@@ -118,7 +118,7 @@ plt.show()
 
 
     
-![png](plots/plots/output_9_0.png)
+![png](plots/output_9_0.png)
     
 
 
@@ -168,7 +168,7 @@ plt.show()
 
 
     
-![png](plots/plots/output_13_0.png)
+![png](plots/output_13_0.png)
     
 
 
@@ -207,7 +207,7 @@ plt.show()
 
 
     
-![png](plots/plots/output_15_0.png)
+![png](plots/output_15_0.png)
     
 
 
@@ -242,4 +242,4 @@ plt.show()
 
 
     
-![png](plots/plots/output_17_0.png)
+![png](plots/output_17_0.png)
