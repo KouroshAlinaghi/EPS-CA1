@@ -8,7 +8,7 @@ def clear_plt():
     plt.cla()
 
 def binomial(n, p, test_times):
-    return np.reshape(np.array(np.random.choice(2, n * test_times, p=[1 - p, p])), (test_times, n))
+    return np.sum(np.reshape(np.array(np.random.choice(2, n * test_times, p=[1 - p, p])), (test_times, n)), axis=1)
 
 def draw_bin_exp(action, theory):
     plt.title("Expectation")
@@ -28,6 +28,8 @@ def draw_bin_var(action, theory):
     plt.legend()
     plt.show()
 
+import time
+
 def Q1():
     n = 500
     m = 5000
@@ -35,14 +37,17 @@ def Q1():
     exp_in_theory = []
     var_in_action = []
     var_in_theory = []
+    t1 = time.time()
     for p in range(101):
         p /= 100
-        test = binomial(n, p, m)
-        exp_in_action.append(np.sum(test) / m)
+        sample = binomial(n, p, m)
+        exp_in_action.append(np.mean(sample))
         exp_in_theory.append(n * p)
-        var_in_action.append(np.var(np.sum(test, axis=1)))
+        var_in_action.append(np.var(sample))
         var_in_theory.append(n * p * (1 - p))
 
+    t2 = time.time()
+    print(t2 - t1)
     draw_bin_exp(exp_in_action, exp_in_theory)
     clear_plt()
     draw_bin_var(var_in_action, var_in_theory)
@@ -156,12 +161,8 @@ def Q4():
     plt.legend()
     plt.show()
 
-import time
-
 def main():
-    std = time.time()
     Q1()
-    print(time.time - std)
     clear_plt()
     Q2()
     clear_plt()

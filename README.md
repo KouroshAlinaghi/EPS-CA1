@@ -1,4 +1,4 @@
-# EPS, CA 1
+# EPS - CA 1
 ## Necessary Imports:
 In this project, we are going to use `numpy` and `scipy.stats` for computational work, and `matplotlib.pyplot` for visualizing our workd with plots and histograms.
 
@@ -35,6 +35,7 @@ plt.show()
 ```
 
 
+    
 ![png](plots/output_3_0.png)
     
 
@@ -68,7 +69,9 @@ plt.show()
     
 
 
-As you can see, the green plot gets out of expected variance plot near `p = 0.5` and I can't find a reason for that.
+As you can see, the green plot gets out of expected variance plot near `p = 0.5`. Let's see why.
+
+When `p` is near `0.5`, the chance of success times being close to expectation increases **AND ALSO** the chance of the date spreading out and getting further from expectation gets more, so the variance oscillates around expectation.
 ## Q2
 Let's define some functions to draw normal, poisson and binomial plots/histograms with their paramteres:
 
@@ -244,3 +247,7 @@ plt.show()
 
     
 ![png](plots/output_17_0.png)
+    
+
+
+Kourosh Alinaghi, 810101476
