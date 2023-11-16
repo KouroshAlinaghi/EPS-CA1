@@ -68,7 +68,7 @@ plt.show()
     
 
 
-As you can see, the green plot gets out of expected variance plot near `p = 0.5` and I can't find a raeson for that.
+As you can see, the green plot gets out of expected variance plot near `p = 0.5` and I can't find a reason for that.
 ## Q2
 Let's define some functions to draw normal, poisson and binomial plots/histograms with their paramteres:
 
