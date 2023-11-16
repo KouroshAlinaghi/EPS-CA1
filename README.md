@@ -217,6 +217,7 @@ No matter what the range of our grades or parameteres that we use in our 3 sampl
 | `Phy ~ U(0, 20)` | 10     |
 | `AP ~ Exp(5)`    | 0.2    |
 | `DM ~ Pois(15)`  | 15     |
+
 But the result of their sum anyway is a normal distribution.
 ## Q4
 Just like what we did in **Q2** but this time `p` is closer to `0.5`, so normal prediction would be a better and more accurate prediction than poisson prediction. We'll use the same functions We've defined in **Q2**:
